@@ -1,0 +1,66 @@
+import React from 'react'
+
+const App = () => {
+
+  const title = "My Blog";
+  const body = "This is my first Blog";
+  const comments = [ // array
+    {id:1, text:"Command One"},
+    {id:2, text:"Command Two"},
+    {id:3, text:"Command Three"}
+  ];
+
+  const loading = false; // initial ah false la irukku
+  
+  const showComment = true; 
+
+  const blockElement = ( // to display array 
+    <div className='comment'> // we must use className for class in react.
+    <h3>Commets ({comments.length})</h3> // comment is created array.
+  
+    <ul> // js la la oru array map pandromna  , append lam pannuvom ,inga just ul la li la potta pothum ellam kdachurum.
+      {
+        comments.map((comment, index) => ( // must use parenthsis.
+          <li key={index}>{comment.text}</li> // must pass key which means id.
+        ))
+      }
+    </ul>
+  </div>
+  )
+
+  if(loading) return (<h1>Hello world</h1>);  // initially loading is false., we dont need to use condition perfectly like if else in js , react take over conditions.
+  // else below return will work we dont need to pass else like js.
+  return (
+    <div className='container'> // multiple element use panna div tag is madatoey
+      <h1>{title.toUpperCase()}</h1>
+      <p>{body}</p> // data get pandrathukku curly braes must.
+      
+      {showComment ? "Yes" : "No"} // ternary operator like if else. ? is if , : is else.
+      {/* <p>{Math.floor(Math.random() * 10)}</p> */}
+
+      {showComment && blockElement} // whenever we we write conditions, first condition is always true  // for && operator no need to use (ternary operator) of second secondition  blockElement :(NO ) >> LIKE THAT instead blockElement is enough when u use and opertor single condition is enough it automartically identifies next condition is false.
+    </div>
+  )
+}
+
+export default App
+
+
+
+
+
+
+
+// {showComment ? (
+//   <div className='comment'>
+//   <h3>Commets ({comments.length})</h3>
+
+//   <ul>  // map la use panni array display pandra appo , js la maari , oru variable initialze panni next athula append panna lam thevva illa. just ul { etha map pannanuma condition write pannitu just li la atha get pannale pothu.}
+//     { 
+//       comments.map((comment, index) => (  // we must use parenthesis in react map method , foreach instead { } like js , if i use {} i cant get the output.
+//         <li key={index}>{comment.text}</li> // i will get all text of comment array , and we must pass key , which meanss id whenever we map or use for each , 
+//       ))
+//     }
+//   </ul>
+// </div>
+// ): null}
