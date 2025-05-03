@@ -129,7 +129,7 @@ const FeedBackForm = () => {
                 <div className="input-group">
                     <input value={text} onChange={handleTextChange} type="text" placeholder='Add your reviews here' />
                     {/* onchange event , input la type pandratha get pandrathu.. */}
-                    <Button  type="submit" isDisabled={btnDisable}  >
+                    <Button  type="submit" isDisabled={btnDisable} className="input-btn" >
                         send
                     </Button>
                 </div>

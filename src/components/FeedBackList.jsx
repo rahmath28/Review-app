@@ -14,7 +14,7 @@ const FeedBackList = () => {
    // usecontext la irukka state ah display panna poren , map panni seperate ah..
 
 
-   const {feedBack , number, iNumber} = useContext(FeedBackContext) // ithuthan syntax to get data from usecontext (Boiler plate code..)
+   const {feedBack } = useContext(FeedBackContext) // ithuthan syntax to get data from usecontext (Boiler plate code..)
 
     if (feedBack.length === 0) {
         return <p className=" container feed-len">No FeedBack Yet</p> // container kulla enakku kedaikum .. 

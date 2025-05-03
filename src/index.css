@@ -175,3 +175,56 @@ body.dark {
   color: white;
 }
 
+/* responsive  */
+@media (max-width: 600px) {
+  .input-group {
+    flex-direction: column;
+  }
+
+  .input-group input,
+  .input-group .input-btn {
+    width: 100%;
+  }
+
+  /* Adjust the card width to better fit mobile screens */
+  .card {
+    width: 95%;
+    padding: 20px;
+  }
+
+  /* Stack review text and icons vertically */
+  .text-display {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center; /* Center everything horizontally */
+    gap: 35px; /* Space between text and icons */
+    text-align: center; /* Center text */
+  }
+
+  /* Container for icons placed below the review */
+  .icon-group {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    gap: 20px; /* Space between delete and edit icons */
+    width: 100%;
+  }
+
+  /* Make icons static so they appear naturally in the flow */
+  .delete,
+  .edit {
+    position: static;
+    margin: 0;
+    font-size: 18px; /* Optional: make icons a bit larger for touch */
+    color: #9A1750; /* Optional: color match your theme */
+  }
+
+  /* Optional: stack nav links vertically */
+  header > div > div {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header > div > div a {
+    font-size: 16px;
+  }
+}
