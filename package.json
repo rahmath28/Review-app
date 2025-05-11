@@ -8,6 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "start": "json-server --watch db.json --port 3000",
     "server": "npx json-server db.json",
     "both": "concurrently \"npm run server\" \"npm run dev\""
   },

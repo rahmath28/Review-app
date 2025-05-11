@@ -1,14 +1,6 @@
 {
   "posts": [
     {
-      "id": "972d",
-      "text": "Moving forward"
-    },
-    {
-      "id": "651d",
-      "text": "Be consistent bro"
-    },
-    {
       "id": "ab89",
       "text": "stay foccussed"
     },
@@ -19,6 +11,10 @@
     {
       "id": "58d1",
       "text": "i will achieve my dream"
+    },
+    {
+      "id": "6c54",
+      "text": "Be consistent"
     }
   ]
 }
