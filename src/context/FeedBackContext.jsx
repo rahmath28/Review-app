@@ -58,7 +58,7 @@ export const FeedBackProvider = ( { children } ) => {  // export keyword is mand
   // 1. Fetch feedback from the JSON server (GET method)
   
   const fetchFeedback = async () => { // this function is to display , server la irukka datas..
-    const response = await fetch("http://localhost:3000/posts"); // ennoda end point..
+    const response = await fetch("https://your-service-name.onrender.com/posts");// ennoda end point..
     const data = await response.json(); // data  variablle now holds my  datas .. next update that in feedback state.
     console.log(data)
     setFeedBack(data); //  enakku kedacha datava setfeedbCK USE  panni update panniten , Update the state with fetched data ,   ******[ FINALLY AFTER GETTING DATA , UPDATE IN FEEDBACK STATE BY SETFEEDBACK METHOD]****
@@ -70,7 +70,7 @@ export const FeedBackProvider = ( { children } ) => {  // export keyword is mand
 
   const addFeedBack = async (newFeedBack) => { // pasing my feedback.
     // newFeedBack.id = uuidv4(); // Assign a unique ID to the new feedback , [HERE ID IS NOT NEEDED FOR FETCH..., FETCH  automatically generate id ]
-    const response = await fetch("http://localhost:3000/posts", { // First one is my endpoint , second na pass pandra data method. 
+    const response = await fetch("https://your-service-name.onrender.com/posts",{ // First one is my endpoint , second na pass pandra data method. 
       method: "POST", // to add data (post method)
       headers: {
         "Content-Type": "application/json",
@@ -87,7 +87,7 @@ export const FeedBackProvider = ( { children } ) => {  // export keyword is mand
   // 3. Update feedback on the JSON server (PUT method)
   const updateFeedback = async (id, updatedItem) => { // update feedback na  na edit la click  panni get panna item  ah, update pandra function.
     // id >> na click panni ennoda editfeedback statela fill ana item odaa id and updated item means , new feedback la na new ah type pandrathathan updated item nu vachurukken..
-    const response = await fetch(`http://localhost:3000/posts/${id}`, { // ithukku id theva ,template literals use panni id ah get pandren , next enna method nu soldrom..
+    const response =await fetch(`https://your-service-name.onrender.com/posts/${id}`, { // ithukku id theva ,template literals use panni id ah get pandren , next enna method nu soldrom..
       method: "PUT", // to update data (PUT METHOD)
       headers: {
         "Content-Type": "application/json",
